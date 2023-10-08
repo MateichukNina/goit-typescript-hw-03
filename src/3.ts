@@ -6,7 +6,13 @@
   Інтерфейс ICharacter повинен включати властивості name і level, і навіть метод introduce і levelUp. 
   Інтерфейс ISpellCaster повинен включати метод castSpell.
 */
-
+interface ISpellCaster { castSpell(): void;}
+interface ICharacter {
+  name: string,
+  level: number,
+  introduce(phrase: string): void,
+  levelUp(): void,
+}
 // реалізація класу Wizard
 class Wizard implements ICharacter, ISpellCaster {
   constructor(public name: string, public level: number) {
